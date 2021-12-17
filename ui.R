@@ -20,7 +20,7 @@ shinyUI(fluidPage(
             h3("K-Means"),
             numericInput("clusters", "Nombre de clusters", 3, min = 1, max = 9),
             h3("DBSCAN"),
-            sliderInput("vois", "Rayon de voisinnage de chaque point", min = 0.0, max = 1.0, value = 0.2),
+            sliderInput("vois", "Rayon de voisinage de chaque point", min = 0.0, max = 1.0, value = 0.2),
             sliderInput("minPoints", "Nombre de voisins au sein du rayon", min = 0, max = 10, value = 3),
             h3("Base niveau de bonheur"),
             downloadButton("downloadData", "Download 'Bonheur.csv'", class = NULL),
