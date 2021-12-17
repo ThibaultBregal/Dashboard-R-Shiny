@@ -20,6 +20,7 @@ palette(c("#E73032", "#377EB8", "#4DAF4A", "#984EA3",
 # Define server logic 
 shinyServer(function(input, output) {
     
+    # selection de l'echantillon d'etude
     datasetInput <- reactive({
         switch(input$bonheur,
                "Toute la base" = bonheur,
@@ -28,6 +29,7 @@ shinyServer(function(input, output) {
                "Bonheur fort" = subset(bonheur, bonheur$niveau_bonheur == "fort"))
     })
     
+    # definition de l'axe X des plots
     colX <- reactive({
         switch(input$Xvar,
                "Score bonheur" = bonheur$score_bonheur,
@@ -41,6 +43,7 @@ shinyServer(function(input, output) {
                "Depenses militaires" = bonheur$dep_militaires)
     })
     
+    # definition de l'axe Y des plots
     colY <- reactive({
         switch(input$Yvar,
                "Score bonheur" = bonheur$score_bonheur,
@@ -54,10 +57,12 @@ shinyServer(function(input, output) {
                "Depenses militaires" = bonheur$dep_militaires)
     })
     
+    # k-means applicables uniquement sur les variables explicatives numeriques, on omet les facteurs
     clusters <- reactive({
         kmeans(bonheur[,c(4:12)], input$clusters)
     })
     
+    # on attribue une couleur differente a chaque echantillon
     myColors <- reactive({
         switch(input$bonheur,
                "Toute la base" = c(palette()[1],palette()[2],palette()[3]),
@@ -121,7 +126,7 @@ shinyServer(function(input, output) {
         points(clusters()$centers, pch = 4, cex = 4, lwd = 4)
     })
     
-    # Clustering par la densite
+    # Clustering via DBSCAN
     output$dbscan_Param <- renderText({ 
         paste("Clustering DBSCAN applique avec un rayon de ", input$vois," et un nombre de voisins de ", input$minPoints,".")
     })
