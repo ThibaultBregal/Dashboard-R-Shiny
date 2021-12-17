@@ -8,7 +8,7 @@ L'objectif de ce projet était de créer un tableau de bord interractif à parti
 
 
 ## Base de données utilisée
-Le jeu de données à partir duquel nous avons décidé d'élborer notre dashboard est un échantillon d'une base utilisée pour mon mémoire de validation de Master 1. Il est composé des données relatives à 148 pays en 2017 et comprend une variable d'intérêt, l'indice du bonheur; ainsi que 9 variables explicatives :
+Le jeu de données à partir duquel nous avons décidé d'élaborer notre dashboard est un échantillon d'une base utilisée pour mon mémoire de validation de Master 1. Il est composé des données relatives à 148 pays en 2017 et comprend une variable d'intérêt, l'indice du bonheur; ainsi que 9 variables explicatives :
 
 1) Les dépenses militaires, pourcentage du PIB ;
 2) La corruption, indice allant de 0 à 100 ;
