@@ -1,9 +1,11 @@
 # Dashboard-R-Shiny
 Projet de Data Viz, sous la direction de Mme. Pauline VAISSIE
+
 Équipe : SUAU Gwendal et BRÉGAL Thibault, M2 EKAP.
 
 ## Problématique
 L'objectif de ce projet était de créer un tableau de bord interractif à partir d'un jeu de données et à l'aide du package R Shiny de R. Cela pour permettre la compréhension / visualisation d'une base de données d'étude.
+
 
 ## Base de données utilisée
 Le jeu de données à partir duquel nous avons décidé d'élborer notre dashboard est un échantillon d'une base utilisée pour mon mémoire de validation de Master 1. Il est composé des données relatives à 148 pays en 2017 et comprend une variable d'intérêt, l'indice du bonheur; ainsi que 9 variables explicatives :
@@ -17,6 +19,7 @@ Le jeu de données à partir duquel nous avons décidé d'élborer notre dashboa
 7) La pollution atmosphérique aux particules fines (PM2,5), exposition annuelle moyenne (microgrammes par mètre cube) ;
 8) Le taux d'utilisateurs d'Internet, pourcentage de la population totale ;
 9) Le tourisme, nombre d'arrivées touristiques annuel.
+
 
 ## Le tableau de bord
 Nous avons décidé de donner la possibilité à l'utilisateur de choisir entre 4 échantillonnages de notre jeu de données : la base complète, les pays avec un bonheur faible, moyen ou important ("Choisir un echantillon"). Ces classes ont été établies à partir de la valeur des quartiles du Happiness Score. 
